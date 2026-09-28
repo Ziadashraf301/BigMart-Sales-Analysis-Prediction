@@ -1,4 +1,4 @@
-# 📈 BigMart Sales Analysis & Prediction
+# BigMart Sales Analysis & Prediction
 
 A comprehensive end-to-end data science project that combines **Excel-based exploratory analysis** with **machine learning** to predict product sales and uncover actionable business insights. This project analyzes 8,523 records across 1,559 products sold in 10 stores, delivering data-driven recommendations for revenue optimization and inventory management.
 
@@ -8,24 +8,24 @@ A comprehensive end-to-end data science project that combines **Excel-based expl
 
 ---
 
-## 🎯 Project Overview
+## Project Overview
 
 This project follows a complete data science workflow:
 1. **Data Wrangling** (Excel) → Cleaning and preprocessing raw data
 2. **Exploratory Data Analysis** (Python) → Understanding patterns and relationships
 3. **Feature Engineering** → Encoding, scaling, and feature selection
 4. **Model Building** → Comparing 4 regression algorithms
-5. **Deployment** → Saving production-ready models with complete pipeline
+5. **Deployment** → Saving production-ready models with a complete pipeline
 
-## 📊 Business Objectives
+## Business Objectives
 
 - **Product Performance Analysis**: Identify top-performing product categories and sales drivers
 - **Store Efficiency Evaluation**: Analyze sales patterns across different store types and locations
 - **Sales Forecasting**: Build ML models to forecast sales for inventory optimization
-- **Pricing Strategy**: Understand price-sales relationship for revenue maximization
+- **Pricing Strategy**: Understand the price-sales relationship for revenue maximization
 - **Regional Insights**: Evaluate sales distribution across city tiers for expansion planning
 
-## 📁 Dataset Description
+## Dataset Description
 
 **Source**: Kaggle's Big Mart Sales Dataset  
 **Records**: 8,523 transactions  
@@ -49,13 +49,13 @@ This project follows a complete data science workflow:
 | `Outlet_Type` | Store format (4 types) | Categorical |
 | `Item_Outlet_Sales` | Sales revenue (Target) | Numerical |
 
-## 🔧 Data Preprocessing Pipeline
+## Data Preprocessing Pipeline
 
 ### Excel-Based Data Wrangling
 
 1. **Missing Value Detection**: Identified 1,463 missing in `Item_Weight`, 2,410 in `Outlet_Size`
-2. **Weight Imputation**: Filled missing weights with average per product identifier
-3. **Visibility Correction**: Replaced zero visibility values with mean visibility
+2. **Weight Imputation**: Filled missing weights with the average per product identifier
+3. **Visibility Correction**: Replaced zero visibility values with the mean visibility
 4. **Feature Removal**: Dropped `Outlet_Size` due to high null count
 5. **Standardization**: Normalized categorical values ("lf" → "Low Fat", "reg" → "Regular")
 6. **Currency Formatting**: Formatted price and sales columns
@@ -64,10 +64,10 @@ This project follows a complete data science workflow:
 
 1. **One-Hot Encoding**: Transformed 4 categorical variables (drop='first')
 2. **Standard Scaling**: Normalized all numerical features
-3. **Feature Selection**: Used Mutual Information to identify top 13 predictive features
+3. **Feature Selection**: Used Mutual Information to identify the top 13 predictive features
 4. **Train-Test Split**: 80-20 split with stratified sampling
 
-## 📈 Exploratory Data Analysis
+## Exploratory Data Analysis
 
 ### Key Findings from Correlation Analysis
 
@@ -84,12 +84,12 @@ This project follows a complete data science workflow:
 - **Seafood and Starchy Foods** show weakest performance in Tier 3 cities
 - Outliers in sales and visibility represent meaningful business patterns (promotions, seasonal demand)
 
-## 📊 BI
+## BI
 
 [![Dashboard Video](https://img.shields.io/badge/▶️%20Watch-Live%20Demo-blue?style=for-the-badge)](https://drive.google.com/file/d/1kPkhKqZoZ8fD86Q7Ldk8msNwRK2BazCJ/view?usp=sharing)
 
 
-## 🤖 Machine Learning Models
+## Machine Learning Models
 
 ### Model Comparison
 
@@ -137,7 +137,7 @@ RandomForestRegressor(
 12. Item_Type_Snack Foods
 13. Outlet_Location_Type_Tier 3
 
-## 🚀 Usage
+## Usage
 
 ### Prerequisites
 
@@ -169,7 +169,7 @@ python predict_model.py
 **This script performs:**
 - Loads saved pipeline (encoder, scaler, model)
 - Reads new data for prediction
-- Applies same preprocessing transformations
+- Applies the same preprocessing transformations
 - Generates sales forecasts
 
 ### Example Usage
@@ -202,7 +202,7 @@ predictions = forecast_sales(new_data, excluded_features, cat_vars,
 print(f"Predicted Sales:\n{predictions}")
 ```
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 BigMart-Sales-Analysis/
@@ -226,7 +226,7 @@ BigMart-Sales-Analysis/
 └── README.md
 ```
 
-## 💼 Business Insights & Recommendations
+## Business Insights & Recommendations
 
 ### 1. Expansion Strategy
 - **Priority**: Focus on Tier 3 cities (highest sales performance)
@@ -240,7 +240,7 @@ BigMart-Sales-Analysis/
 
 ### 3. Pricing Strategy
 - **Finding**: Positive correlation between price and sales (r = 0.57)
-- **Opportunity**: Baking goods show lower prices with room for margin improvement
+- **Opportunity**: Baked goods show lower prices with room for margin improvement
 - **Action**: Test 5-10% price increases on high-performing categories
 
 ### 4. Inventory Management
@@ -253,7 +253,7 @@ BigMart-Sales-Analysis/
 - **Action**: Prioritize this format for new locations
 - **Expected Impact**: 15-20% higher sales per square foot
 
-## 📊 Model Performance Metrics
+## Model Performance Metrics
 
 ### Random Forest Model Evaluation
 
@@ -272,7 +272,7 @@ BigMart-Sales-Analysis/
 - Mean absolute error: ~34% of one standard deviation
 - Model reliably forecasts within ±756 units for 68% of predictions
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - **Python 3.8+**
 - **pandas**: Data manipulation
@@ -283,7 +283,7 @@ BigMart-Sales-Analysis/
 - **joblib**: Model serialization
 - **Excel**: Initial data wrangling
 
-## 📝 Requirements
+## Requirements
 
 ```txt
 pandas>=1.3.0
@@ -295,13 +295,8 @@ matplotlib>=3.4.0
 seaborn>=0.11.0
 ```
 
-## 📈 Future Enhancements
-
-1. **Ensemble Methods**: Combine Random Forest with XGBoost for improved accuracy
-2. **A/B Testing Framework**: Test pricing strategies using model predictions
-
-## 👤 Author
+## Author
 
 **Ziad Ashraf**  
-*Data Scientist & Business Analyst*  
+*Data Scientist*  
 Project Date: October 6, 2022
